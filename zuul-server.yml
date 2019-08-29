@@ -3,12 +3,9 @@ server:
   
 zuul:
   ignoredServices: '*'
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000
-    routes:
-      get-list-customer: # Service to create as sample
-        path: /listCustomer/** #path that will be intercepted
-        url: localhost:8091/listCustomer #which url the request will e mapped to
-        #stripPrefix: false  #if zuul should replace the "/sample/" segment
-        #sensitiveHeaders:
+  routes:
+    get-list-customer: # Service to create as sample
+      path: /listCustomer/** #path that will be intercepted
+      url: localhost:8091/listCustomer #which url the request will e mapped to
+      #stripPrefix: false  #if zuul should replace the "/sample/" segment
+      #sensitiveHeaders:
