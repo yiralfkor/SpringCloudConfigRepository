@@ -9,8 +9,8 @@ zuul:
       url: http://localhost:8091/users #which url the request will e mapped to
       stripPrefix: false  #if zuul should replace the "/sample/" segment
       sensitiveHeaders:
-    get-list-customer:
+    #get-list-customer:
       path: /swagger/**
       url: http://localhost:8091/swagger-ui.html
-      stripPrefix: false  #if zuul should replace the "/sample/" segment
-      sensitiveHeaders:
+      #stripPrefix: false  #if zuul should replace the "/sample/" segment
+      #sensitiveHeaders:
