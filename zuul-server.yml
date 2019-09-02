@@ -7,7 +7,8 @@ zuul:
     get-list-customer: # Service to create as sample
       path: /customers/** #path that will be intercepted
       url: http://localhost:8091/users #which url the request will e mapped to
-      #stripPrefix: false  #if zuul should replace the "/sample/" segment
+      stripPrefix: false  #if zuul should replace the "/sample/" segment
+      sensitiveHeaders:
     #get-list-customer:
       #path: /swagger/**
       #url: http://localhost:8091/swagger-ui.html
