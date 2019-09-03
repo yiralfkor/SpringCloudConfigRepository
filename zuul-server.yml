@@ -22,4 +22,4 @@ zuul:
       path: /swagger/**
       url: http://localhost:8091/swagger-ui.html
       serviceId: get-list-customer
-      stripPrefix: false
+      sensitiveHeaders:
