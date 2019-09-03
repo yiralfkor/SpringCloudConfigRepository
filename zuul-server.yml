@@ -14,11 +14,11 @@ zuul:
       #url: http://localhost:8091/swagger-ui.html
       #stripPrefix: false  #if zuul should replace the "/sample/" segment
       #sensitiveHeaders:
-    myserver_mypath:
+    service_path:
       path: /customers/**
       url: http://localhost:8091/users
       serviceId: get-list-customer
-    myserver_another_path:
+    documentation_path:
       path: /swagger/**
       url: http://localhost:8091/swagger-ui.html
       serviceId: get-list-customer
