@@ -4,13 +4,21 @@ server:
 zuul:
   ignoredServices: '*'
   routes:
-    get-list-customer: # Service to create as sample
-      path: /customers/** #path that will be intercepted
-      url: http://localhost:8091/users #which url the request will e mapped to
-      stripPrefix: false  #if zuul should replace the "/sample/" segment
-      sensitiveHeaders:
-    get-customer-doc:
+    #get-list-customer: # Service to create as sample
+      #path: /customers/** #path that will be intercepted
+      #url: http://localhost:8091/users #which url the request will e mapped to
+      #stripPrefix: false  #if zuul should replace the "/sample/" segment
+      #sensitiveHeaders:
+    #get-customer-doc:
+      #path: /swagger/**
+      #url: http://localhost:8091/swagger-ui.html
+      #stripPrefix: false  #if zuul should replace the "/sample/" segment
+      #sensitiveHeaders:
+    myserver_mypath:
+      path: /customers/**
+      url: http://localhost:8091/users
+      serviceId: get-list-customer
+    myserver_another_path:
       path: /swagger/**
       url: http://localhost:8091/swagger-ui.html
-      stripPrefix: false  #if zuul should replace the "/sample/" segment
-      sensitiveHeaders:
+      serviceId: get-list-customer
