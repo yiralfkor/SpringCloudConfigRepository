@@ -16,7 +16,7 @@ zuul:
       #sensitiveHeaders:
     service_path:
       path: /customers/**
-      url: http://localhost:8091/users
+      url: http://localhost:8091/customers
       serviceId: customers
     documentation_path:
       path: /swagger/**
