@@ -17,9 +17,9 @@ zuul:
     service_path:
       path: /customers/**
       url: http://localhost:8091/users
-      serviceId: get-list-customer
+      serviceId: customers
     documentation_path:
       path: /swagger/**
       url: http://localhost:8091/swagger-ui.html
-      serviceId: get-list-customer
+      serviceId: customers
       sensitiveHeaders:
