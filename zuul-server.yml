@@ -23,3 +23,9 @@ zuul:
       url: http://localhost:8091/swagger-ui.html
       serviceId: customers
       sensitiveHeaders:
+    documentation_json:
+      path: /api-docs/**
+      url: http://localhost:8091/v2/api-docs
+      serviceId: customers
+      sensitiveHeaders:
+    
